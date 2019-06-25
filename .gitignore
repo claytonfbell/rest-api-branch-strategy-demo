@@ -1,0 +1,14 @@
+.DS_STORE
+.settings/
+*/.settings/
+.project
+*/.project
+.classpath
+*/.classpath
+*/.gitignore
+target/
+*/target/
+*.iml
+*/*.iml
+.idea/
+*/.idea/
