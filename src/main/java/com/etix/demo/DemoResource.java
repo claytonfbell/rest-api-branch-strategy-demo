@@ -9,8 +9,8 @@ import javax.ws.rs.core.Response;
 public class DemoResource {
 
     @GET
-    @Path("/hello")
-    public Response hello(@QueryParam("name") String name){
+    @Path("/hello/{name}")
+    public Response hello(@PathParam("name") String name){
         if (name == null || name.length() == 0) {
             name = "demo";
         }
