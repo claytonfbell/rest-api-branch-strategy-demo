@@ -12,7 +12,7 @@ public class DemoResource {
     @Path("/hello/{name}")
     public Response hello(@PathParam("name") String name){
         if (name == null || name.length() == 0) {
-            name = "demo";
+            name = "world";
         }
         return Response.ok("Hello, <b>" + name + "</b>").build();
     }
