@@ -13,7 +13,7 @@ public class DemoResource {
     @Path("/hello")
     public Response hello(@QueryParam("name") String name){
         if (name == null || name.length() == 0) {
-            name = "demo";
+            name = "world";
         }
         return Response.ok("Hello, " + name + "! Now it is "+ new Date()).build();
     }
