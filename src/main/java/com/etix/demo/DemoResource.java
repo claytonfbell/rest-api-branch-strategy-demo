@@ -14,6 +14,6 @@ public class DemoResource {
         if (name == null || name.length() == 0) {
             name = "demo";
         }
-        return Response.ok("Hello, " + name).build();
+        return Response.ok("Hello, <b>" + name + "</b>").build();
     }
 }
