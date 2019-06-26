@@ -15,6 +15,6 @@ public class DemoResource {
         if (name == null || name.length() == 0) {
             name = "world";
         }
-        return Response.ok("Hello, <b>" + name + "</b>. Now it is " + LocalDate.now() + "<br/> From: " + from).build();
+        return Response.ok("Hello, <b>" + name + "</b>. Now it is " + LocalDate.now() + "<br/> From: <b>" + from + "</b>").build();
     }
 }
