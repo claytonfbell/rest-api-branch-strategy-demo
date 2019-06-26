@@ -10,11 +10,11 @@ import java.time.LocalDate;
 public class DemoResource {
 
     @GET
-    @Path("/hello/{name}")
-    public Response hello(@PathParam("name") String name){
+    @Path("/hello/{name}/{from}")
+    public Response hello(@PathParam("name") String name, @PathParam("from") String from){
         if (name == null || name.length() == 0) {
             name = "world";
         }
-        return Response.ok("Hello, <b>" + name + "</b>. Now it is " + LocalDate.now()).build();
+        return Response.ok("Hello, <b>" + name + "</b>. Now it is " + LocalDate.now() + "<br/> From: " + from).build();
     }
 }
