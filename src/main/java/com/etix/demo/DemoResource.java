@@ -3,6 +3,7 @@ package com.etix.demo;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Produces(MediaType.TEXT_HTML)
@@ -15,6 +16,6 @@ public class DemoResource {
         if (name == null || name.length() == 0) {
             name = "world";
         }
-        return Response.ok("Hello, " + name + "! Now it is "+ new Date()).build();
+        return Response.ok("Hello, " + name + "! Now it is "+ LocalDate.now()).build();
     }
 }
