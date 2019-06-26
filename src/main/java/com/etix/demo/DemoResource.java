@@ -6,7 +6,7 @@ import javax.ws.rs.core.Response;
 import java.time.LocalDate;
 
 @Produces(MediaType.TEXT_HTML)
-@Path("/demo/")
+@Path("/demo")
 public class DemoResource {
 
     @GET
