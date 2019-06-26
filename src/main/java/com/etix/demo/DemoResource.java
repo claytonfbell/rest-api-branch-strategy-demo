@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 @Produces(MediaType.TEXT_HTML)
-@Path("/demo/")
+@Path("/demo")
 public class DemoResource {
 
     @GET
