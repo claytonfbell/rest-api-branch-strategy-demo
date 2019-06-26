@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@ApplicationPath("")
+@ApplicationPath("api")
 public class DemoApp extends Application {
     private final static Set<Class<?>> classes = Stream.of(DemoResource.class).collect(Collectors.toSet());
 
