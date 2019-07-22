@@ -24,12 +24,29 @@ public class DemoResource {
 
     @GET
     @Path("/currentTime")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response currentTime() {
 
         TimeZone tz = TimeZone.getTimeZone("UTC");
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
         df.setTimeZone(tz);
         String nowAsISO = df.format(new Date());
-        return Response.ok(nowAsISO).build();
+        CurrentTimeObject cto = new CurrentTimeObject();
+        cto.setIs8601(nowAsISO);
+
+        return Response.ok(cto).build();
+    }
+}
+
+class CurrentTimeObject
+{
+    private String is8601;
+
+    public String getIs8601() {
+        return is8601;
+    }
+
+    public void setIs8601(String is8601) {
+        this.is8601 = is8601;
     }
 }
